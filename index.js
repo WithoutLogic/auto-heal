@@ -84,7 +84,7 @@ module.exports = function AutoHeal(mod) {
     function load() {
         if (!hooks.length) {
             
-            hook('S_PARTY_MEMBER_LIST', 8, (event) => {             
+            hook('S_PARTY_MEMBER_LIST', 9, (event) => {             
                 const copy = partyMembers;          
                 partyMembers = event.members.filter(m => m.playerId != mod.game.me.playerId); // remove self from targets
                 
